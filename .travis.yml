@@ -1,0 +1,19 @@
+language:
+- node_js
+node_js:
+- 0.10
+before_install:
+- npm install -g grunt-cli
+- npm run create-stack --force
+script:
+- npm run test
+- npm run run
+after_script:
+- npm run delete-stack --force
+branches:
+  only:
+  - master
+env:
+  global:
+  - secure: L2RWibW0RUUvOC5LS/iS3W4YZd7nEz4NjpAsvtwoPgIK3HrDG/RdoBsd31m8iqAAz6/CHvUnxOBYrUSIlDXnpErGeFWYwBQ9kyTrKaYZoimHe70ZJMEVb3dc0o/Mzdj4nrFrCSuxyxvScOr9QfGc5z5jiHIvX0kdjmR19GPZer0=
+  - secure: ekO6Ncg1XhyWBWTXlQewdJdXKIcBL8yUV3XOVBg0l9VOoxgXKJOZ4YttDnzVX+q5WkZOgDcDt/BXRa2s8F6xKRLXHZmgsNoAsaTmyDMbCGPXHNkENJcvVCGSrfPqXK6m6Xws3OFb1nCWQ7F/UnAYYelTTugGA075IrHEendAsSA=
